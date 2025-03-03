@@ -1,0 +1,27 @@
+@media (max-width: 991.98px) {
+  /* layout header */
+  header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group-icon {
+    margin-bottom: 10px;
+  }
+
+  .group-icon h5 {
+    display: none;
+  }
+
+  .group-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .group-search input {
+    width: 80% !important;
+  }
+  /* end layout header */
+
+}
