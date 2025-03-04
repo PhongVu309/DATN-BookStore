@@ -46,10 +46,44 @@
   color: #fba31a;
 }
 
+.group-icon .icon:hover {
+  text-decoration: none;
+  color: #ffc266;
+}
+
 .group-icon .icon i {
   font-size: 24px;
 }
 
 .group-icon .icon h5 {
   font-size: 0.9rem;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f0f0;
 }
