@@ -1,3 +1,8 @@
+p {
+  padding: 0;
+  margin: 0 !important;
+}
+
 .bg-light {
   background-color: #f8f9fa !important;
 }
@@ -8,4 +13,12 @@
 
 .text-white {
   color: #fff !important;
+}
+
+.text-upcase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
 }
