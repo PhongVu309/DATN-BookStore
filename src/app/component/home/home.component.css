@@ -1,0 +1,105 @@
+.content {
+  height: 5000px;
+}
+
+.content .silde-home {
+  margin-top: 16px;
+}
+
+.content .silde-home img {
+  max-width: 100%;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+.group-cata {
+  margin: 16px 0;
+}
+
+.list-cata {
+  padding: 16px;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.list-cata .custom-icon {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  align-items: center;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  /* background: #eeeeee; */
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-cata .icon-hotdeal {
+  color: #ff363e;
+  background: rgb(252, 160, 61);
+  background: linear-gradient(
+    62deg,
+    rgba(252, 160, 61, 1) 0%,
+    rgba(252, 231, 125, 1) 100%
+  );
+}
+
+.list-cata .icon-flashsale {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    37deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(253, 21, 21, 1) 40%,
+    rgba(255, 196, 169, 1) 99%
+  );
+}
+
+.list-cata .icon-toy {
+  background: rgb(137, 247, 254);
+  background: linear-gradient(
+    5deg,
+    rgba(137, 247, 254, 1) 0%,
+    rgba(102, 166, 255, 1) 100%
+  );
+}
+
+.list-cata .icon-book {
+  background: rgb(255, 154, 158);
+  background: linear-gradient(
+    42deg,
+    rgba(255, 154, 158, 1) 0%,
+    rgba(254, 207, 239, 1) 100%
+  );
+}
+
+.list-cata .icon-child {
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
+}
+
+.list-cata .icon-economic {
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+
+.list-cata .icon-certificate {
+  background-color: #dcd9d4;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    radial-gradient(
+      at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 50%
+    );
+  background-blend-mode: soft-light, screen;
+}
+
+.text-icon {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  white-space: nowrap; /* Giữ chữ trên một dòng */
+}
