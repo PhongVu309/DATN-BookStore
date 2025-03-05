@@ -18,16 +18,32 @@
     width: 80% !important;
   }
   /* end layout header */
-
 }
 
-@media (min-width: 768px) {
-  .mobile-accordion { display: none; }
 
 
+
+/* Mobile (320px - 480px) */
+@media only screen and (max-width: 480px) {
+  /* CSS cho mobile */
 }
 
-@media (max-width: 768px) {
-  .desktop-footer { display: none; }
-  .hideItems { display: none !important; }
+/* Tablet (481px - 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* CSS cho tablet */
+}
+
+/* Small Desktop (769px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* CSS cho small desktop */
+}
+
+/* Large Desktop (1025px - 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* CSS cho large desktop */
+}
+
+/* Extra Large Screens (1201px trở lên) */
+@media only screen and (min-width: 1201px) {
+  /* CSS cho màn hình cực lớn */
 }

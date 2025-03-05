@@ -2,6 +2,7 @@
 .footer{
   padding-top: 16px;
   background-color: #fff;
+  border-top: 16px solid #f8f9fa;
 }
 
 .about-me .support-cus {
