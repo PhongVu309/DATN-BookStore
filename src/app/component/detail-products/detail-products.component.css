@@ -1,0 +1,127 @@
+
+.content {
+  border-top:16px solid #f8f9fa ;
+}
+
+.group-detail {
+  padding: 16px;
+}
+
+.group-detail .image-products {
+  border: 1px solid black;
+  border-image: initial;
+  overflow: hidden;
+}
+
+.group-detail .image-products img {
+  max-width: 100%;
+}
+
+.group-decription .title-product {
+  font-size: 1.5rem;
+}
+
+.info-author label {
+  padding-right: 16px;
+}
+
+.info-author a {
+  text-decoration: none;
+  color: #ef8400;
+}
+
+.box-price {
+  margin-top: 16px;
+}
+
+.box-price .price {
+  margin: 16px;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #ff7600;
+}
+
+.quantity-products {
+  margin-top: 16px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-container label {
+  margin-right: 16px;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-right: 8px;
+  margin-bottom: 0;
+  line-height: 42px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.quantity-input {
+  width: 6em !important;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.box-btn-buy {
+  margin-top: 16px;
+}
+
+.btn {
+  border-radius: 20px;
+  border: 2px solid;
+  background: #fff;
+}
+
+.btn-buy {
+  width: 48% !important;
+  background-color: #ef8400;
+  color: #fff;
+  border-color: #ef8400;
+}
+
+.btn-add-cart {
+  width: 48% !important;
+  margin-left: 10px;
+  border-color: #ef8400;
+  color: #ef8400;
+}
+
+.group-info {
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.text-title {
+  font-size: 20px;
+  text-align:  justify;
+}
+
+.group-info p {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.title h2 {
+  font-size: 1.3rem;
+}
+
+.newProduct-title h2 {
+  margin: 0;
+}
