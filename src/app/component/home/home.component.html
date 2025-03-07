@@ -154,142 +154,24 @@
     </div>
 
     <div class="row list-products" style="margin: 16px">
-      <div class="col item-products">
+      <div class="col item-products" *ngFor="let product of products">
         <div class="position-relative img-product">
           <a routerLink="/detail-product">
-            <img
-              src="assets/img/home/flashsale/xin-chao-noi-so-1.jpg"
-              class="img-fuild"
-              alt=""
-            />
+            <img [src]="product.imageUrl" class="img-fuild" alt="" />
           </a>
-          <span class="position-absolute discount-product">40%</span>
+          <span class="position-absolute discount-product">{{ product.discount }}%</span>
         </div>
         <div class="infor-products">
-          <a href="" class="name-product"
-            ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-          >
-          <p class="price">72,000</p>
-          <p><del>120,000</del></p>
-          <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">(79)</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="col item-products">
-        <div class="position-relative img-product">
-          <a href="">
-            <img
-              src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-              class="img-fuild"
-              alt=""
-            />
+          <a href="" class="name-product">
+            <h6>{{ product.name }}</h6>
           </a>
-          <span class="position-absolute discount-product">40%</span>
-        </div>
-        <div class="infor-products">
-          <a href="" class="name-product"
-            ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-          >
-          <p class="price">72,000</p>
-          <p><del>120,000</del></p>
+          <p class="price">{{ product.price }}</p>
+          <p><del>{{ product.originalPrice }}</del></p>
           <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">(79)</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="col d-none d-sm-block item-products">
-        <div class="position-relative img-product">
-          <a href="">
-            <img
-              src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-              class="img-fuild"
-              alt=""
-            />
-          </a>
-          <span class="position-absolute discount-product">40%</span>
-        </div>
-        <div class="infor-products">
-          <a href="" class="name-product"
-            ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-          >
-          <p class="price">72,000</p>
-          <p><del>120,000</del></p>
-          <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">(79)</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="col d-none d-md-block item-products">
-        <div class="position-relative img-product">
-          <a href="">
-            <img
-              src="assets/img/home/flashsale/toa-sang-shine.jpg"
-              class="img-fuild"
-              alt=""
-            />
-          </a>
-          <span class="position-absolute discount-product">40%</span>
-        </div>
-        <div class="infor-products">
-          <a href="" class="name-product"
-            ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-          >
-          <p class="price">72,000</p>
-          <p><del>120,000</del></p>
-          <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">(79)</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="col d-none d-lg-block item-products">
-        <div class="position-relative img-product">
-          <a href="">
-            <img
-              src="assets/img/home/flashsale/toa-sang-shine.jpg"
-              class="img-fuild"
-              alt=""
-            />
-          </a>
-          <span class="position-absolute discount-product">40%</span>
-        </div>
-        <div class="infor-products">
-          <a href="" class="name-product"
-            ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-          >
-          <p class="price">72,000</p>
-          <p><del>120,000</del></p>
-          <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">(79)</span>
+            <span class="star-rating" *ngFor="let star of [].constructor(product.rating)">
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="text-rating">({{ product.reviews }})</span>
           </p>
         </div>
       </div>
