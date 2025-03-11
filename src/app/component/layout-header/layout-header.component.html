@@ -1,4 +1,5 @@
 <div class="header">
+
   <div class="banner-header d-flex justify-content-center">
     <img
       src="	https://cdn0.fahasa.com/media/wysiwyg/Thang-02-2025/CT_T3_header_1263x60.jpg"
@@ -6,7 +7,69 @@
     />
   </div>
 
-  <div class="container d-flex align-items-center justify-content-center header-top">
+  <div class="container-fluid d-flex align-items-center justify-content-center header-top">
+
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+          <button
+              class="btn btn-hamburger-menu btn-category"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu"
+          >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-upcase">Danh mục sản phẩm</h5>
+          <button
+              type="button"
+              class="btn-close btn-close-black"
+              data-bs-dismiss="offcanvas"
+          ></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuSachTruyen">
+                  Sách truyện <span><i class="fa-solid fa-caret-down"></i></span>
+              </a>
+              <ul class="list-unstyled collapse ms-3" id="subMenuSachTruyen">
+                  <li><a href="#" class="text-black text-decoration-none">Thiếu nhi</a></li>
+                  <li><a href="#" class="text-black text-decoration-none">Kinh tế</a></li>
+                  <li><a href="#" class="text-black text-decoration-none">Tâm lý/Kỹ năng</a></li>
+              </ul>
+            </li>
+              <li><a href="#" class="text-black text-decoration-none">Sách văn học</a></li>
+
+              <li>
+                <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuTacGia">
+                    Tác giả <span><i class="fa-solid fa-caret-down"></i></span>
+                </a>
+                <ul class="list-unstyled collapse ms-3" id="subMenuTacGia">
+                    <li><a href="#" class="text-black text-decoration-none">Phong Vũ</a></li>
+                    <li><a href="#" class="text-black text-decoration-none">Linh Thân</a></li>
+                    <li><a href="#" class="text-black text-decoration-none">Trung's Trâu's</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuNhaXB">
+                    Nhà xuất bản <span><i class="fa-solid fa-caret-down"></i></span>
+                </a>
+                <ul class="list-unstyled collapse ms-3" id="subMenuNhaXB">
+                    <li><a href="#" class="text-black text-decoration-none">Vũ</a></li>
+                    <li><a href="#" class="text-black text-decoration-none">Nông</a></li>
+                    <li><a href="#" class="text-black text-decoration-none">Nguyễn</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+
     <div>
       <a routerLink="/"><img src="assets\img\layout-header\logo-2.jpg" alt="" class="logo" /></a>
     </div>
@@ -19,7 +82,7 @@
     </div>
 
     <div class="group-icon d-flex">
-      <a href="#" class="icon d-flex flex-column align-items-center">
+      <a routerLink="/cart" class="icon d-flex flex-column align-items-center">
         <i class="fas fa-shopping-cart"></i>
         <h5>Giỏ hàng</h5>
       </a>
