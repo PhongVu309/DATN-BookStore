@@ -18,6 +18,10 @@
     width: 80% !important;
   }
   /* end layout header */
+
+  .payment-form {
+    border-right: none !important;
+  }
 }
 
 @media (max-width: 425px) {
