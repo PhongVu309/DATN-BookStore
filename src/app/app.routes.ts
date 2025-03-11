@@ -7,6 +7,7 @@ import { FlashSaleComponent } from './component/flash-sale/flash-sale.component'
 import { HotDealComponent } from './component/hot-deal/hot-deal.component';
 import { CartComponent } from './component/cart/cart.component';
 import { PaymentComponent } from './component/payment/payment.component';
+import { AuthorComponent } from './component/author/author.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,4 +18,5 @@ export const routes: Routes = [
   {path: 'hot-deal', component: HotDealComponent},
   {path: 'cart', component: CartComponent},
   {path: 'payment', component: PaymentComponent},
+  {path: 'author', component: AuthorComponent},
 ];
