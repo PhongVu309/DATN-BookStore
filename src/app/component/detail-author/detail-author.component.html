@@ -9,7 +9,7 @@
     </nav>
   </div>
 
-  <div class="container bg-white">
+  <div class="container bg-white" #productContainer>
     <div class="row p-3">
       <div class="form-filter">
         <form action="" class="form-inline">
@@ -27,7 +27,7 @@
     <hr class="m-0">
     <!-- Product List -->
     <div class="row list-products" style="margin: 16px">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 item-products" *ngFor="let product of products">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 item-products" *ngFor="let product of products">
         <div class="position-relative img-product">
           <a routerLink="/detail-product">
             <img
