@@ -133,3 +133,25 @@ p {
   text-overflow: ellipsis;
   width: 100%;
 }
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-controls button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination-controls button.active {
+  background: #ef8400;
+  color: #f1faff;
+  border: none;
+}
+
+.pagination-controls span {
+  margin: 0 10px;
+}

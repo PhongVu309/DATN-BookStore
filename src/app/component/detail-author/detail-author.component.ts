@@ -3,12 +3,12 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-search',
-  imports: [CommonModule, RouterModule],
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  selector: 'app-detail-author',
+  imports: [RouterModule, CommonModule],
+  templateUrl: './detail-author.component.html',
+  styleUrl: './detail-author.component.css'
 })
-export class SearchComponent {
+export class DetailAuthorComponent {
   currentPage: number = 1;
   totalPages: number = 1;
   products: any[] = [];

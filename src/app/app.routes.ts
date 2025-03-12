@@ -9,6 +9,7 @@ import { CartComponent } from './component/cart/cart.component';
 import { PaymentComponent } from './component/payment/payment.component';
 import { AuthorComponent } from './component/author/author.component';
 import { SearchComponent } from './component/search/search.component';
+import { DetailAuthorComponent } from './component/detail-author/detail-author.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,4 +22,5 @@ export const routes: Routes = [
   {path: 'payment', component: PaymentComponent},
   {path: 'author', component: AuthorComponent},
   {path: 'search', component: SearchComponent},
+  {path: 'detail-author', component: DetailAuthorComponent},
 ];
