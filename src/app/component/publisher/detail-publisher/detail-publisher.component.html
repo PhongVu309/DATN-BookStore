@@ -27,7 +27,7 @@
     <hr class="m-0">
     <!-- Product List -->
     <div class="row list-products" style="margin: 16px">
-      <div class="col-6 col-sm-6 col-md-4 col-lg-3 item-products" *ngFor="let product of products">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-2 item-products" *ngFor="let product of products">
         <div class="position-relative img-product">
           <a routerLink="/detail-product">
             <img
@@ -45,12 +45,10 @@
           <p class="price">{{ product.price | currency:'VND' }}</p>
           <p><del>{{ product.originalPrice | currency:'VND' }}</del></p>
           <p>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-            <span class="text-rating">({{ product.rating }})</span>
+            <span class="star-rating" *ngFor="let star of [].constructor(product.rating)">
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <span class="text-rating">({{ product.preview }})</span>
           </p>
         </div>
       </div>
