@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb" style="padding-top: 16px">
         <li class="breadcrumb-item">
-          <a href="#" class="text-decoration-none">Trang chủ</a>
+          <a routerLink="/" class="text-decoration-none">Trang chủ</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Flashsale</li>
       </ol>
@@ -13,7 +13,7 @@
       <img src="assets/img/flash-sale/flashBookStore.jpg" alt="" />
     </div>
 
-    <div class="container justify-content-center align-items-center  bg-white flash-sale">
+    <div class="container justify-content-center align-items-center  bg-white flash-sale" #productContainer>
       <div class="row d-flex group-time">
         <h2 class="flashsale-title text-upcase">
           flash sale
@@ -33,287 +33,39 @@
       <hr class="m-0" style="margin: 16px 0 24px 0 !important;" />
 
       <div class="row list-products" style="margin: 16px">
-        <div class="col item-products">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 item-products" *ngFor="let product of products">
           <div class="position-relative img-product">
             <a routerLink="/detail-product">
               <img
-                src="assets/img/home/flashsale/xin-chao-noi-so-1.jpg"
-                class="img-fuild"
-                alt=""
+                [src]="product.img"
+                class="img-fluid"
+                alt="{{ product.name }}"
               />
             </a>
-            <span class="position-absolute discount-product">40%</span>
+            <span class="position-absolute discount-product">{{ product.discount }}</span>
           </div>
           <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-                class="img-fuild"
-                alt=""
-              />
+            <a href="" class="name-product">
+              <h6>{{ product.name }}</h6>
             </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
+            <p class="price">{{ product.price | currency:'VND' }}</p>
+            <p><del>{{ product.originalPrice | currency:'VND' }}</del></p>
             <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-sm-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-md-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/toa-sang-shine.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-lg-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/toa-sang-shine.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
+              <span class="star-rating" *ngFor="let star of [].constructor(product.rating)">
+                <i class="fa-solid fa-star"></i>
+              </span>
+              <span class="text-rating">({{ product.reviews }})</span>
             </p>
           </div>
         </div>
       </div>
-
-      <div class="row list-products" style="margin: 16px">
-        <div class="col item-products">
-          <div class="position-relative img-product">
-            <a routerLink="/detail-product">
-              <img
-                src="assets/img/home/flashsale/xin-chao-noi-so-1.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-sm-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/dung-thach-toi-1.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-md-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/toa-sang-shine.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col d-none d-lg-block item-products">
-          <div class="position-relative img-product">
-            <a href="">
-              <img
-                src="assets/img/home/flashsale/toa-sang-shine.jpg"
-                class="img-fuild"
-                alt=""
-              />
-            </a>
-            <span class="position-absolute discount-product">40%</span>
-          </div>
-          <div class="infor-products">
-            <a href="" class="name-product"
-              ><h6>Xin Chào, Nỗi Sợ (Hello, Fears)</h6></a
-            >
-            <p class="price">72,000</p>
-            <p><del>120,000</del></p>
-            <p>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-              <span class="text-rating">(79)</span>
-            </p>
-          </div>
-        </div>
+      <div class="pagination-controls py-3">
+        <button class="btn" *ngIf="currentPage > 1" (click)="previousPage()" [disabled]="currentPage === 1">Trước</button>
+        <ng-container *ngFor="let page of pages">
+          <button class="btn" *ngIf="page !== '...'" (click)="goToPage(+page)" [class.active]="page === currentPage">{{ page }}</button>
+          <span *ngIf="page === '...'">{{ page }}</span>
+        </ng-container>
+        <button class="btn" (click)="nextPage()" [disabled]="currentPage === totalPages">Sau</button>
       </div>
 
     </div>

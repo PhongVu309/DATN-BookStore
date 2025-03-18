@@ -490,12 +490,10 @@
               <p class="price">{{ product.price | currency:'VND' }}</p>
               <p><del>{{ product.originalPrice | currency:'VND' }}</del></p>
               <p>
-                <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-                <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-                <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-                <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-                <span class="star-rating"><i class="fa-solid fa-star"></i></span>
-                <span class="text-rating">({{ product.rating }})</span>
+                <span class="star-rating" *ngFor="let star of [].constructor(product.rating)">
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="text-rating">({{ product.reviews }})</span>
               </p>
             </div>
           </div>

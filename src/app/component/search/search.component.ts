@@ -92,7 +92,7 @@ export class SearchComponent {
       allProducts.sort((a, b) => b.price - a.price);
     }
 
-    const itemsPerPage = 12;
+    const itemsPerPage = 18;
     const startIndex = (this.currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
