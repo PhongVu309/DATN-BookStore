@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-detail-author',
@@ -8,23 +8,17 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   templateUrl: './detail-author.component.html',
   styleUrl: './detail-author.component.css'
 })
-export class DetailAuthorComponent implements OnInit {
+export class DetailAuthorComponent {
   currentPage: number = 1;
   totalPages: number = 1;
   products: any[] = [];
   pages: (number | string)[] = [];
   sortOption: string = 'newest';
-  subAuthor_detail: string | null = null;
 
   @ViewChild('productContainer') productContainer!: ElementRef;
 
-  constructor(private route: ActivatedRoute) {
+  constructor() {
     this.loadProducts();
-  }
-  ngOnInit(): void {
-      this.route.paramMap.subscribe(params => {
-        this.subAuthor_detail = params.get('subAuthor_detail');
-      });
   }
 
   previousPage() {
