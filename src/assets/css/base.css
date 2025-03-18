@@ -121,3 +121,37 @@ p {
   box-shadow: 0px 2px 5px 1px #c3c3c3;
   transition: 0.3s;
 }
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-controls button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination-controls button.active {
+  background: #ef8400;
+  color: #f1faff;
+  border: none;
+}
+
+.pagination-controls span {
+  margin: 0 10px;
+}

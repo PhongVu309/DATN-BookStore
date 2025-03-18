@@ -2,6 +2,11 @@
   max-width: 100%;
 }
 
+.btn-category {
+  background-color: #fba31a;
+  border-color: #fba31a;
+}
+
 .header-top {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -87,4 +92,14 @@
 
 .dropdown-menu a:hover {
   background: #f0f0f0;
+}
+
+.collapse a {
+  display: block;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.collapse a:hover {
+  background-color: #fba31a;
 }

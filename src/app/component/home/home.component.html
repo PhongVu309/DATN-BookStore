@@ -4,7 +4,7 @@
       id="carouselExampleIndicators"
       class="carousel slide w-auto slide-PHome"
       data-bs-ride="carousel"
-      data-bs-interval="3000"
+      data-bs-interval="2000"
     >
       <div class="carousel-indicators">
         <button
@@ -51,24 +51,6 @@
           />
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
     <!-- Rest of your content -->
@@ -79,14 +61,14 @@
       class="d-flex justify-content-center align-items-center list-unstyled list-cata"
     >
       <li class="custom-icon icon-flashsale">
-        <a href="" class="text-dark"
+        <a routerLink="/flash-sale" class="text-dark"
           ><i class="fa-solid fa-bolt text-white"></i>
           <label class="text-icon">Flashsale</label>
         </a>
       </li>
 
       <li class="custom-icon icon-hotdeal">
-        <a href="" class="text-dark">
+        <a routerLink="/hot-deal" class="text-dark">
           <span class=""><i class="fa-brands fa-gripfire"></i></span>
           <label class="text-icon">Hot deal</label>
         </a>
@@ -179,7 +161,7 @@
 
     <div class="row btn-view">
       <div class="col d-flex justify-content-center align-items-center">
-        <button class="btn-see-more">Xem thêm</button>
+        <button class="btn-see-more" routerLink="/flash-sale">Xem thêm</button>
       </div>
     </div>
   </div>
