@@ -1,30 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-detail-author',
+  selector: 'app-group-categories',
   imports: [RouterModule, CommonModule],
-  templateUrl: './detail-author.component.html',
-  styleUrl: './detail-author.component.css'
+  templateUrl: './group-categories.component.html',
+  styleUrl: './group-categories.component.css',
 })
-export class DetailAuthorComponent implements OnInit {
+
+export class GroupCategoriesComponent {
+  isFilterVisible: boolean = false;
   currentPage: number = 1;
   totalPages: number = 1;
   products: any[] = [];
   pages: (number | string)[] = [];
   sortOption: string = 'newest';
-  subAuthor_detail: string | null = null;
+
+  toggleFilter(): void {
+    this.isFilterVisible = !this.isFilterVisible;
+  }
+
 
   @ViewChild('productContainer') productContainer!: ElementRef;
 
-  constructor(private route: ActivatedRoute) {
+  constructor() {
     this.loadProducts();
-  }
-  ngOnInit(): void {
-      this.route.paramMap.subscribe(params => {
-        this.subAuthor_detail = params.get('subAuthor_detail');
-      });
   }
 
   previousPage() {
@@ -146,3 +147,4 @@ export class DetailAuthorComponent implements OnInit {
     this.productContainer.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+

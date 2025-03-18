@@ -1,20 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-detail-author',
+  selector: 'app-detail-publisher',
   imports: [RouterModule, CommonModule],
-  templateUrl: './detail-author.component.html',
-  styleUrl: './detail-author.component.css'
+  templateUrl: './detail-publisher.component.html',
+  styleUrl: './detail-publisher.component.css'
 })
-export class DetailAuthorComponent implements OnInit {
+export class DetailPublisherComponent implements OnInit {
   currentPage: number = 1;
   totalPages: number = 1;
   products: any[] = [];
   pages: (number | string)[] = [];
   sortOption: string = 'newest';
-  subAuthor_detail: string | null = null;
+  subDetail_publisher: string | null = null;
 
   @ViewChild('productContainer') productContainer!: ElementRef;
 
@@ -23,7 +23,7 @@ export class DetailAuthorComponent implements OnInit {
   }
   ngOnInit(): void {
       this.route.paramMap.subscribe(params => {
-        this.subAuthor_detail = params.get('subAuthor_detail');
+        this.subDetail_publisher = params.get('subDetail_publisher');
       });
   }
 
