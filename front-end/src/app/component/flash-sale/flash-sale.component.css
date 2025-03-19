@@ -1,0 +1,26 @@
+body {
+  margin-bottom: -16px;
+}
+
+.banner-flash-sale {
+  margin-bottom: 16px;
+}
+
+.banner-flash-sale img {
+  max-width: 100%;
+}
+
+.flash-sale .flashsale-title {
+  padding: 0.5rem;
+  background-color: #fba31a;
+  color: #fff7f3;
+  font-size: 1.5rem;
+}
+
+.countdown small {
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  margin: 0 0.2rem;
+}

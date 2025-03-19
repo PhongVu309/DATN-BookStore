@@ -1,0 +1,198 @@
+<body class="container-fuild bg-light">
+  <div class="container">
+    <nav aria-label="breadcrumb" style="padding: 1rem 0 1rem 1rem">
+      <ol class="breadcrumb" style="margin: 0;">
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="#">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="/cart">Giỏ hàng</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 bg-white payment-form">
+        <h5>Địa chỉ giao hàng</h5>
+        <div class="form-group">
+          <label for="">
+            Họ tên
+            <span class="text-danger">*</span>
+          </label>
+          <input type="text" name="fullname" class="form-control" value="" />
+        </div>
+
+        <div class="row form-group">
+          <div class="col-md-6">
+            <label for="">
+              Email
+              <span class="text-danger">*</span>
+            </label>
+            <input type="text" name="email" class="form-control" value="" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="">
+              Số điện thoại
+              <span class="text-danger">*</span>
+            </label>
+            <input type="text" name="phone" class="form-control" value="" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <label for="">
+              Địa chỉ
+              <span class="text-danger">*</span>
+            </label>
+          </div>
+
+          <form [formGroup]="locationForm">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <label for="province" class="form-label"
+                  >Chọn tỉnh/thành phố</label
+                >
+                <select
+                  class="form-select"
+                  id="province"
+                  formControlName="province"
+                  (change)="onProvinceChange()"
+                >
+                  <option value="">-- Chọn thành phố --</option>
+                  <option
+                    *ngFor="let province of provinces"
+                    [value]="province.code"
+                  >
+                    {{ province.name }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <label for="district" class="form-label">Chọn quận/huyện</label>
+                <select
+                  class="form-select"
+                  id="district"
+                  formControlName="district"
+                  (change)="onDistrictChange()"
+                >
+                  <option value="">-- Chọn quận/huyện --</option>
+                  <option
+                    *ngFor="let district of districts"
+                    [value]="district.code"
+                  >
+                    {{ district.name }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <label for="ward" class="form-label">Chọn phường/xã</label>
+                <select class="form-select" id="ward" formControlName="ward">
+                  <option value="">-- Chọn phường/xã --</option>
+                  <option *ngFor="let ward of wards" [value]="ward.code">
+                    {{ ward.name }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="col-md-6 col-12 form-group">
+                <label for="ward" class="form-label">Số nhà</label>
+                <input
+                  type="text"
+                  placeholder="Số nhà, tên đường/phường/xã/thị trấn"
+                  class="form-control"
+                  name="address"
+                  value=""
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-group">
+          <label for="">Ghi chú</label>
+          <textarea name="note" id="" rows="3" class="form-control"></textarea>
+        </div>
+        <hr class="mt-0" style="margin: 0" />
+      </div>
+
+      <div class="col-lg-4 bg-white cart-form">
+        <div class="py-3" style="padding-right: 1rem">
+          <h5>Giỏ hàng</h5>
+          <div class="cart-detail">
+            <div class="row cart-item mb-3">
+              <div class="col-2 col-sm-3 d-none d-sm-block">
+                <img
+                  src="assets/img/cart/item-cart.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="col-8 col-sm-7">
+                <p class="text-sm ellipsis-text">
+                  <a
+                    routerLink="/detail-product"
+                    class="text-decoration-none text-dark"
+                    >Bộ Sách Khoa Học Bỏ Túi (5 Cuốn)</a
+                  >
+                </p>
+                <p class="text-sm text-price mt-0">94.500đ x 1</p>
+              </div>
+
+              <div class="col-4 col-sm-2">
+                <p class="text-sm text-danger text-end">94.500đ</p>
+              </div>
+            </div>
+            <hr class="mt-0" />
+
+            <div class="row">
+              <div class="col-8 offset-4 text-end">
+                <p>
+                  Tổng tiền:
+                  <strong class="text-danger">94.500đ</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3" style="margin: 0;">
+    <div class="col-12 bg-white">
+      <div class="py-3 px-lg-3" style="margin-left: 1rem;">
+        <h5>Hình thức thanh toán</h5>
+        <div class="form-check">
+          <label for="" style="font-weight: unset">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="payment-type"
+              value="COD"
+              checked
+            />
+            Thanh toán khi nhận hàng
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-4 mb-3 text-center">
+        <hr class="mt-0" />
+        <button class="btn btn-secondary me-3" routerLink="/cart">
+          Quay lại
+        </button>
+        <button class="btn btn-danger">Thanh toán</button>
+      </div>
+    </div>
+  </div>
+
+</body>

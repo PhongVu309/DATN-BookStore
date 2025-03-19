@@ -1,0 +1,81 @@
+/* footer */
+.footer{
+  padding-top: 16px;
+  background-color: #fff;
+  border-top: 16px solid #f8f9fa;
+}
+
+.about-me .support-cus {
+  /* background-color: #DCE3EC; */
+  padding: 40px 16px 20px 16px;
+  gap: 10px;
+}
+
+.support-cus .header-network h6,
+.support-cus .text-header h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.support-cus .header-network h6 {
+  padding-bottom: 5px;
+}
+
+.support-cus .icon-network ul,
+.support-cus .text-description ul {
+  padding: 0;
+  list-style: none;
+}
+
+.support-cus .icon-network li {
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.icon-network li i {
+  font-size: 25px;
+}
+
+.support-cus .text-description li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.icon-network .dowload li {
+  padding: 0px 0px 10px 0px;
+  gap: 10px;
+}
+
+.icon-network .back-top {
+  margin: -40px 0 0 0;
+  /* margin-right: 15px; */
+  float: inline-end;
+}
+
+.icon-network .back-top li {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  align-content: center;
+  left: 0;
+}
+
+.footer .contact {
+  padding: 20px 0px 20px 0px;
+  background-color: #fba31a;
+  color: #FFFFFFF5;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.footer .contact span {
+  font-weight: 700;
+}
+/* end footer */
