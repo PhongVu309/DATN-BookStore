@@ -1,0 +1,104 @@
+<div class="header">
+
+  <div class="banner-header d-flex justify-content-center">
+    <img
+      src="	https://cdn0.fahasa.com/media/wysiwyg/Thang-02-2025/CT_T3_header_1263x60.jpg"
+      alt=""
+    />
+  </div>
+
+  <div class="container-fluid d-flex align-items-center justify-content-center header-top">
+
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+          <button
+              class="btn btn-hamburger-menu btn-category"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu"
+          >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-upcase">Danh mục sản phẩm</h5>
+          <button
+              type="button"
+              class="btn-close btn-close-black"
+              data-bs-dismiss="offcanvas"
+          ></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuSachTruyen">
+                  Sách truyện <span><i class="fa-solid fa-caret-down"></i></span>
+              </a>
+              <ul class="list-unstyled collapse ms-3" id="subMenuSachTruyen">
+                  <li><a routerLink="/book-categories/Sách văn học" class="text-black text-decoration-none">Sách văn học</a></li>
+                  <li><a routerLink="/book-categories/Thiếu nhi" class="text-black text-decoration-none">Thiếu nhi</a></li>
+                  <li><a routerLink="/book-categories/Kinh tế" class="text-black text-decoration-none">Kinh tế</a></li>
+                  <li><a routerLink="/book-categories/Tâm lý - Kỹ năng" class="text-black text-decoration-none">Tâm lý/Kỹ năng</a></li>
+              </ul>
+            </li>
+
+              <li>
+                <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuTacGia">
+                    Tác giả <span><i class="fa-solid fa-caret-down"></i></span>
+                </a>
+                <ul class="list-unstyled collapse ms-3" id="subMenuTacGia">
+                    <li><a routerLink="/detail-author/Vũ Hồng Phong" class="text-black text-decoration-none">Phong Vũ</a></li>
+                    <li><a routerLink="/detail-author/Linh Thân" class="text-black text-decoration-none">Linh Thân</a></li>
+                    <li><a routerLink="/detail-author/Trung ngu" class="text-black text-decoration-none">Trung's Trâu's</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="text-black text-decoration-none" data-bs-toggle="collapse" data-bs-target="#subMenuNhaXB">
+                    Nhà xuất bản <span><i class="fa-solid fa-caret-down"></i></span>
+                </a>
+                <ul class="list-unstyled collapse ms-3" id="subMenuNhaXB">
+                    <li><a routerLink="/detail-publisher/Nhã Nam" class="text-black text-decoration-none">Nhã Nam</a></li>
+                    <li><a routerLink="/detail-publisher/Nông" class="text-black text-decoration-none">Nông</a></li>
+                    <li><a routerLink="/detail-publisher/Nguyễn" class="text-black text-decoration-none">Nguyễn</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+    <div>
+      <a routerLink="/"><img src="assets\img\layout-header\logo-2.jpg" alt="" class="logo" /></a>
+    </div>
+
+    <div class="group-search">
+      <input type="text" class="search focus-ring focus-ring-warning" placeholder="" />
+      <button class="btn-search" routerLink="/search">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <div class="group-icon d-flex">
+      <a routerLink="/cart" class="icon d-flex flex-column align-items-center">
+        <i class="fas fa-shopping-cart"></i>
+        <h5>Giỏ hàng</h5>
+      </a>
+      <div class="dropdown">
+        <a routerLink="/login" class="icon d-flex flex-column align-items-center">
+          <i class="fas fa-user"></i>
+          <h5>Tài khoản</h5>
+        </a>
+        <div class="dropdown-menu">
+          <a routerLink="/login">Đăng nhập</a>
+          <a routerLink="/register">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  -->
+</div>
