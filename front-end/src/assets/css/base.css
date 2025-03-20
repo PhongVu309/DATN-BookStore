@@ -63,9 +63,9 @@ p {
   text-align: center;
   line-height: 3rem;
 }
-.img-fuild {
+.img-fluid {
   width: 100%;
-  height: auto;
+  height: 170px !important;
 }
 
 .item-products .infor-products {
@@ -79,8 +79,16 @@ p {
 }
 
 .infor-products .name-product h6 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Cho phép xuống dòng */
+  line-height: 1.5; /* Khoảng cách giữa các dòng */
   font-size: 1em;
   font-weight: 400;
+
 }
 
 .infor-products .price {
