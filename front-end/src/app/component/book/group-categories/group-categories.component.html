@@ -472,14 +472,13 @@
           </form>
         </div>
         <div class="row list-products" style="margin: 16px">
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 item-products" *ngFor="let product of products">
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 item-products"
+            *ngFor="let product of displayedProducts"
+          >
             <div class="position-relative img-product">
               <a routerLink="/detail-product">
-                <img
-                  [src]="product.img"
-                  class="img-fluid"
-                  alt="{{ product.name }}"
-                />
+                <img [src]="product.image" class="img-fluid" alt="{{ product.name }}" />
               </a>
               <span class="position-absolute discount-product">{{ product.discount }}</span>
             </div>
@@ -488,24 +487,46 @@
                 <h6>{{ product.name }}</h6>
               </a>
               <p class="price">{{ product.price | currency:'VND' }}</p>
-              <p><del>{{ product.originalPrice | currency:'VND' }}</del></p>
+              <p><del>{{ product.original_price | currency:'VND' }}</del></p>
               <p>
-                <span class="star-rating" *ngFor="let star of [].constructor(product.rating)">
+                <span
+                  class="star-rating"
+                  *ngFor="let star of [].constructor(product.rating)"
+                >
                   <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="text-rating">({{ product.reviews }})</span>
+                <span class="text-rating">({{ product.preview }})</span>
               </p>
             </div>
           </div>
         </div>
-        <!-- Pagination Controls -->
+
         <div class="pagination-controls py-3">
-          <button class="btn" *ngIf="currentPage > 1" (click)="previousPage()" [disabled]="currentPage === 1">Trước</button>
+          <button
+            class="btn"
+            (click)="previousPage()"
+            [disabled]="currentPage === 1"
+          >
+            Trước
+          </button>
           <ng-container *ngFor="let page of pages">
-            <button class="btn" *ngIf="page !== '...'" (click)="goToPage(+page)" [class.active]="page === currentPage">{{ page }}</button>
+            <button
+              class="btn"
+              *ngIf="page !== '...'"
+              (click)="goToPage(+page)"
+              [class.active]="page === currentPage"
+            >
+              {{ page }}
+            </button>
             <span *ngIf="page === '...'">{{ page }}</span>
           </ng-container>
-          <button class="btn" (click)="nextPage()" [disabled]="currentPage === totalPages">Sau</button>
+          <button
+            class="btn"
+            (click)="nextPage()"
+            [disabled]="currentPage === totalPages"
+          >
+            Sau
+          </button>
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@ package com.example.bookstore.model;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+
 @Entity
 @Table(name = "products")
 public class Product {
